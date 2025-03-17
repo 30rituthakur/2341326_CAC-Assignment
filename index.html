@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library System</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <h1>E-Library System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'books' %}">Browse Books</a></li>
+                <li><a href="{% url 'borrow' %}">Borrow/Return</a></li>
+                <li><a href="{% url 'admin' %}">Admin</a></li>
+                <li><a href="{% url 'login' %}" class="btn">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="welcome-card">
+            <h2>Welcome to the E-Library</h2>
+            <p>Explore and borrow digital books anytime, anywhere.</p>
+            <a href="{% url 'books' %}" class="btn">Start Exploring</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 E-Library System | Designed by Ritu Karan Thakur</p>
+    </footer>
+</body>
+</html>

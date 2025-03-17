@@ -1,0 +1,389 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* Adjust this based on your navbar height */
+}   
+
+.content {
+    margin-top: 80px; /* Ensure content doesn't get hidden behind navbar */
+}
+
+
+/* Navigation Bar (Matching Home Page) */
+header {
+    background: linear-gradient(to right,#7A5DC7 #7A5DC7);
+    padding: 15px 0;
+    text-align: center;
+}
+header h1 {
+    color: white;
+    font-size: 28px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #EDE1FF;
+}
+/* Authentication Section */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+.auth-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 370px;
+    text-align: center;
+    border-top: 5px solid #7A5DC7;
+}
+.auth-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.auth-tabs button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #7A5DC7;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.auth-tabs button.active {
+    background: #7A5DC7;
+}
+/* Form Styling */
+input, .password-container input {
+    width: 100%; /* Ensures both email & password fields are same width */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Prevents extra width from padding */
+}
+.password-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.password-container input {
+    padding-right: 40px; /* Space for eye icon */
+}
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #7A5DC7;
+}
+/* Button */
+.btn {
+    background: #7A5DC7;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #7A5DC7;
+}
+/* Footer (Matching Home Page) */
+footer {
+    background: linear-gradient(to right, #7A5DC7, #7A5DC7);
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7A5DC7;
+    padding: 15px;
+    border-bottom: 4px solid #7A5DC7;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    width: 100%;
+}
+
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+
+.nav-links li {
+    display: inline-block;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #7A5DC7;
+    transform: scale(1.05);
+}
+
+
+/* Icons */
+.nav-links a i {
+    font-size: 18px;
+}
+
+
+/* Books Page */
+.books-container {
+    width: 90%;
+    margin: 30px auto;
+    
+}
+
+
+h2 {
+    color: #7A5DC7; /* Light Purple */
+    margin-bottom: 10px;
+}
+
+
+.book-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+
+.book {
+    text-align: center;
+    width: 200px;
+}
+
+
+.book img {
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.book p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+#searchBar {
+    padding: 10px;
+    width: 50%;
+    border: 2px solid #7A5DC7;
+    border-radius: 5px;
+}
+
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #7A5DC7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #7A5DC7;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.borrow-container {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.book-item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.book-item button:hover {
+    background-color: #45a049;
+}
+
+
+.admin-container {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.form-container input {
+    padding: 8px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.form-container button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.form-container button:hover {
+    background-color: #0078A0;
+}
+
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+.book-details-container {
+    max-width: 600px; /* Adjust width as needed */
+    margin: 20px; /* Adds spacing */
+    padding: 0; /* No padding */
+    text-align: left; /* Ensures everything stays left-aligned */
+}
+
+#book-img {
+    width: 200px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Prevents stretching */
+    display: block; /* Ensures proper alignment */
+    margin-bottom: 15px; /* Adds spacing below the image */
+}
+
+
+
+

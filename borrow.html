@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow / Return Books</title>
+    <link rel="stylesheet" href="{% static 'styles(1).css' %}">
+</head>
+<body>
+
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">📚 E-Library</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'books' %}">Browse Books</a></li>
+            <li><a href="{% url 'borrow' %}" class="active">Borrow / Return</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Borrow / Return Section -->
+    <div class="borrow-container">
+        <h2>Borrow / Return Books</h2>
+        <p>Select a book to borrow or return:</p>
+
+
+        <div class="book-list">
+            <!-- Books will be dynamically loaded here -->
+        </div>
+    </div>
+
+
+    <script src="{% static 'borrow.js' %}"></script>
+</body>
+</html>

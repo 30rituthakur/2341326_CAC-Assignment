@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - E-Library</title>
+    <link rel="stylesheet" href="{% static 'styles(1).css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <h1>E-Library System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'books' %}">Browse Books</a></li>
+                <li><a href="{% url 'borrow' %}">Borrow/Return</a></li>
+                <li><a href="{% url 'admin' %}">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Login / Sign-Up Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button id="login-tab" class="active" onclick="showLogin()">Login</button>
+                <button id="signup-tab" onclick="showSignup()">Sign Up</button>
+            </div>
+            <div id="login-form">
+                <h2>Welcome Back!</h2>
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <div class="password-container">
+                        <input type="password" name="password" id="login-password" placeholder="Password" required>
+                        <span class="toggle-password" onclick="togglePassword('login-password')">👁</span>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+            </div>
+            <div id="signup-form" style="display: none;">
+                <h2>Create an Account</h2>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <div class="password-container">
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                        <span class="toggle-password" onclick="togglePassword('signup-password')">👁</span>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 E-Library System | Designed by Ritu Karan Thakur</p>
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

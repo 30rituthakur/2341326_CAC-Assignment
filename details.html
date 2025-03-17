@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="{% static 'styles(1).css' %}">
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="logo">📚 E-Library</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'books' %}">Browse Books</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="book-details-container">
+        <img id="book-img" src="" alt="Book Image">
+        <h1 id="book-title"></h1>
+        <p>Author: <span id="book-author"></span></p>
+        <p>Genre: <span id="book-genre"></span></p>
+        <p>Year: <span id="book-year"></span></p>
+        <p>Pages: <span id="book-pages"></span></p>
+        <p>Synopsis: <span id="book-synopsis"></span></p>        
+    </div>
+
+
+    <script src="{% static 'details.js' %}"></script>
+</body>
+</html>

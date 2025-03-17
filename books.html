@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - E-Library</title>
+    <link rel="stylesheet" href="{% static 'styles(1).css' %}">
+</head>
+<body>
+
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">📚 E-Library</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="{% url 'books' %}" class="active"><i class="fas fa-book"></i> Browse Books</a></li>
+            <li><a href="{% url 'login' %}"><i class="fas fa-user"></i> Login / Sign Up</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for books...">
+        <button onclick="searchBooks()">Search</button>
+    </div>
+
+
+    <!-- Books Section -->
+    <div class="books-container">
+       
+        <!-- Fantasy Genre -->
+        <h2>Fantasy</h2>
+        <div class="book-row">
+            <div class="book">
+                <a href="{% url 'details' %}?title=The%20Name%20of%20the%20Wind&author=Patrick%20Rothfuss&genre=Fantasy&year=2007&pages=662&img=thenameofthewind.jpeg">
+                    <img src="{% static 'images/thenameofthewind.jpeg' %}" alt="The Name of the Wind">
+                </a>
+                <p>The Name of the Wind</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=Mistborn&author=Brandon%20Sanderson&genre=Fantasy&year=2006&pages=541&img=mistborn.jpg">
+                    <img src="{% static 'images/mistborn.jpg' %}" alt="Mistborn">
+                </a>
+                <p>Mistborn: The Final Empire</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=The%20Hobbit&author=J.R.R.%20Tolkien&genre=Fantasy&year=1937&pages=310&img=thehobbit.jpg">
+                    <img src="{% static 'images/thehobbit.jpg' %}" alt="The Hobbit">
+                </a>
+                <p>The Hobbit</p>
+            </div>
+        </div>
+
+
+        <!-- Science Fiction Genre -->
+        <h2>Science Fiction</h2>
+        <div class="book-row">
+            <div class="book">
+                <a href="{% url 'details' %}?title=Dune&author=Frank%20Herbert&genre=Science%20Fiction&year=1965&pages=412&img=dune.jpeg">
+                    <img src="{% static 'images/dune.jpeg' %}" alt="Dune">
+                </a>
+                <p>Dune</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=The%20Left%20Hand%20of%20Darkness&author=Ursula%20K.%20Le%20Guin&genre=Science%20Fiction&year=1969&pages=304&img=thelefthandofdarkness.jpeg">
+                    <img src="{% static 'images/thelefthandofdarkness.jpeg' %}" alt="The Left Hand of Darkness">
+                </a>
+                <p>The Left Hand of Darkness</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=The%20Three-Body%20Problem&author=Liu%20Cixin&genre=Science%20Fiction&year=2008&pages=400&img=thethreebodyproblem.jpg">
+                    <img src="{% static 'images/thethreebodyproblem.jpg' %}" alt="The Three-Body Problem">
+                </a>
+                <p>The Three-Body Problem</p>
+            </div>
+        </div>
+
+
+        <!-- Mystery/Thriller Genre -->
+        <h2>Mystery / Thriller</h2>
+        <div class="book-row">
+            <div class="book">
+                <a href="{% url 'details' %}?title=Gone%20Girl&author=Gillian%20Flynn&genre=Mystery&year=2012&pages=432&img=gonegirl.jpg">
+                    <img src="{% static 'images/gonegirl.jpg' %}" alt="Gone Girl">
+                </a>
+                <p>Gone Girl</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=The%20Girl%20with%20the%20Dragon%20Tattoo&author=Stieg%20Larsson&genre=Mystery&year=2005&pages=465&img=thegirlwiththedragontattoo.jpg">
+                    <img src="{% static 'images/thegirlwiththedragontattoo.jpg' %}" alt="The Girl with the Dragon Tattoo">
+                </a>
+                <p>The Girl with the Dragon Tattoo</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=Big%20Little%20Lies&author=Liane%20Moriarty&genre=Mystery&year=2014&pages=460&img=biglittlelies.jpg">
+                    <img src="{% static 'images/biglittlelies.jpg' %}" alt="Big Little Lies">
+                </a>
+                <p>Big Little Lies</p>
+            </div>
+        </div>
+
+
+        <!-- Horror Genre -->
+        <h2>Horror</h2>
+        <div class="book-row">
+            <div class="book">
+                <a href="{% url 'details' %}?title=The%20Shining&author=Stephen%20King&genre=Horror&year=1977&pages=447&img=theshinning.jpeg">
+                    <img src="{% static 'images/theshinning.jpeg' %}" alt="The Shining">
+                </a>
+                <p>The Shining</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=House%20of%20Leaves&author=Mark%20Z.%20Danielewski&genre=Horror&year=2000&pages=709&img=houseofleaves.jpg">
+                    <img src="{% static 'images/houseofleaves.jpg' %}" alt="House of Leaves">
+                </a>
+                <p>House of Leaves</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=Bird%20Box&author=Josh%20Malerman&genre=Horror&year=2014&pages=262&img=birdbox.jpg">
+                    <img src="{% static 'images/birdbox.jpg' %}" alt="Bird Box">
+                </a>
+                <p>Bird Box</p>
+            </div>
+        </div>
+
+
+        <!-- Non-Fiction Genre -->
+        <h2>Non-Fiction</h2>
+        <div class="book-row">
+            <div class="book">
+                <a href="{% url 'details' %}?title=Sapiens&author=Yuval%20Noah%20Harari&genre=Non-Fiction&year=2011&pages=443&img=sapiens.jpeg">
+                    <img src="{% static 'images/sapiens.jpeg' %}" alt="Sapiens">
+                </a>
+                <p>Sapiens</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=Educated&author=Tara%20Westover&genre=Non-Fiction&year=2018&pages=334&img=educated.jpeg">
+                    <img src="{% static 'images/educated.jpeg' %}" alt="Educated">
+                </a>
+                <p>Educated</p>
+            </div>
+            <div class="book">
+                <a href="{% url 'details' %}?title=Atomic%20Habits&author=James%20Clear&genre=Non-Fiction&year=2018&pages=320&img=atomichabits.jpeg">
+                    <img src="{% static 'images/atomichabits.jpeg' %}" alt="Atomic Habits">
+                </a>
+                <p>Atomic Habits</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'script(1).js' %} "></script>
+</body>
+</html>
